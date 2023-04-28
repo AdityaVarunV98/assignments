@@ -1,0 +1,58 @@
+\documentclass[12pt,twocolumn,notitlepage]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{listings}
+\usepackage[latin1]{inputenc}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{amssymb}
+
+\newcommand*{\comb}[2]{{}^{#1}C_{#2}}
+
+\title{Probability Assignment 1 (12.13.5.2)}
+\author{Aditya Varun V (AI22BTECH11001)}
+\date{}
+
+\begin{document}
+\maketitle
+\subsection*{Question}
+A pair of dice is thrown 4 times. If getting a doublet is considered a success, find
+the probability of two successes.
+
+
+\subsection*{Solution}
+
+Let X denote the number of doublets/successes obtained after the 4 trials. Clearly, X has the binomial distribution with $n=4$ and
+\begin{align}
+    p &= \text{probability of getting a doublet with two dice} \nonumber \\
+    &= \frac{1}{6} \nonumber
+\end{align}
+
+Now, since X has the binomial distribution, the probability mass function is given by
+\begin{align}
+    P(\text{exactly } r \text{ successes}) &= \comb{n}{r}\left(\frac{1}{6}\right)^{r}\left(\frac{5}{6}\right)^{n-r} \nonumber\\
+    P_X(r) &= \comb{n}{r}\left(\frac{1}{6}\right)^{r}\left(\frac{5}{6}\right)^{n-r} \nonumber
+\end{align}
+
+Hence, the probability of two successes is
+\begin{align}
+    P_X(2) &= \comb{4}{2}\left(\frac{1}{6}\right)^{2}\left(\frac{5}{6}\right)^{2} \nonumber\\
+    &= \frac{25}{216} \nonumber
+\end{align}
+
+\end{document}
+
