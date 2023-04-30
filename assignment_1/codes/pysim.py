@@ -15,7 +15,7 @@ p = 1/6
 k_values = list(range(n+1))
 
 #y gives the probability values for each of the values of k
-y = [binom.pmf(k,n,p) for k in k_values]
+y = binom.pmf(k_values,n,p)
 
 print(y[2])   #printing the probability of the number of doublets being 2
 
