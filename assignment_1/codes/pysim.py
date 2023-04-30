@@ -19,3 +19,13 @@ y = binom.pmf(k_values,n,p)
 
 print(y[2])   #printing the probability of the number of doublets being 2
 
+
+#Simulating the probability using  the binomial random variable
+
+simlen = 10000
+
+data_binom = binom.rvs(n,p,size=simlen) #Simulating the event of tossing a coin twice
+
+fav_count = np.count_nonzero(data_binom == 2)  #Finding the number of times there are two doublets in the simulation data
+
+print(fav_count/simlen)  #printing the probability of there being two doublets in the 4 rolls based on the simulation
