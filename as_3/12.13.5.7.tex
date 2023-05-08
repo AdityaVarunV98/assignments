@@ -54,8 +54,8 @@ Let X be the number of questions the student answers correctly. Clearly, X has t
 
 Hence, the probability that he gets at least 12 correct:  
 \begin{align}
-    \pr{X\geq 12} &= Cdf\brak{X=20} - Cdf\brak{X=11}\\
-    &= 1 - Cdf\brak{X=11}\\
+    \pr{X\geq 12} &= F_X\brak{20} - F_X\brak{11}\\
+    &= 1 - F_X\brak{11}\\
     &= 1 - \frac{\sum_{r=0}^{11} \comb{20}{r}}{2^{20}}\\
     &= \frac{\sum_{r=12}^{20} \comb{20}{r}}{2^{20}}
 \end{align}
