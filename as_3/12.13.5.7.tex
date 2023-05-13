@@ -46,20 +46,32 @@ In an examination, 20 questions of true-false type are asked. Suppose a student 
 
 \subsection*{Solution}
 
-Let X be the number of questions the student answers correctly. Clearly, X has the binomial distribution with $n=20$ and $p=0.5$ (assuming non-biased coin). Now, since X has the binomial distribution, the probability mass function is given by
+Let $X$ be the number of questions the student answers correctly. Clearly, $X$ has the binomial distribution with $n=20$ and $p=0.5$ (assuming non-biased coin). 
 \begin{align}
-    \pr{X=r} &= \comb{20}{r}\brak{\frac{1}{2}}^{r}\brak{\frac{1}{2}}^{n-r}\\ 
-    &=\frac{\comb{20}{r}}{2^{20}}
+    X&=Bin(n,p)\\
+    &=Bin(20,0.5)
 \end{align}
 
-Hence, the probability that he gets at least 12 correct:  
+The mean of $X$,   
 \begin{align}
-    \pr{X\geq 12} &= F_X\brak{20} - F_X\brak{11}\\
-    &= 1 - F_X\brak{11}\\
-    &= 1 - \frac{\sum_{r=0}^{11} \comb{20}{r}}{2^{20}}\\
-    &= \frac{\sum_{r=12}^{20} \comb{20}{r}}{2^{20}}
+    \mu &= n\times p\\
+    &= 10
 \end{align}
 
+The Variance of $X$,
+\begin{align}
+    \sigma^2 &= n\times p\times (1-p)\\
+    &= 5
+\end{align}
+Applying the normal approximation to $X$ for large values of n,
+\begin{align}
+	\pr{a \le X \le b}&= \int_{a-0.5}^{b+0.5} \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(k-\mu)^2}{2\sigma^2}}\,dk\ \\
+	\pr{12 \le X \le 20}&= \int_{11.5}^{20.5} \frac{1}{\sqrt{10\pi}}e^{-\frac{(k-10)^2}{10}}\,dk\ \\
+\end{align}
+On computation,
+\begin{align} 
+	\pr{12 \le X \le 20} \approx 0.2512 
+\end{align}
 \end{document}
 
 Foot
