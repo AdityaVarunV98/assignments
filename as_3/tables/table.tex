@@ -150,12 +150,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{60pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{210pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{60pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{170pt*\gnumericScale}@{}}x\end{tabular}}
 
 \begin{longtable}
 [c]{%
 	|b{\gnumericColA}%
-	|b{\gnumericColB}|%
+	|b{\gnumericColB}%
+	|b{\gnumericColC}|%
 	}
 %\begin{tabular}{|c|c|}
 
@@ -192,18 +194,22 @@
 
 \hline
 	 \gnumericPB{\raggedright}\gnumbox[l]{\text{VARIABLE}}
+	&\gnumericPB{\raggedright}\gnumbox[l]{\text{VALUE}}
 	&\gnumericPB{\raggedright}\gnumbox[l]{\text{DESCRIPTION}}
 \\
 \hline
-	 \gnumericPB{\center}\gnumbox[l]{\text{n}}
+	 \gnumericPB{\center}\gnumbox[l]{\text{$n$}}
+	&\gnumericPB{\center}\gnumbox[l]{\text{20}}
 	&\gnumericPB{\raggedright}\gnumbox[l]{\text{Number of questions in the examination}}
 \\
 \hline
-	 \gnumericPB{\center}\gnumbox[l]{\text{p}}
-	&\gnumericPB{\raggedright}\gnumbox[l]{\text{Probability of coin showing heads}}
+	 \gnumericPB{\center}\gnumbox[l]{\text{$p$}}
+	&\gnumericPB{\center}\gnumbox[l]{\text{0.5}}
+	&\gnumericPB{\raggedright}\gnumbox[l]{\text{Probability of coin showing heads}}	
 \\
 \hline
-	 \gnumericPB{\center}\gnumbox[l]{\text{X}}
+	 \gnumericPB{\center}\gnumbox[l]{\text{$X$}}
+	&\gnumericPB{\center}\gnumbox[l]{\text{-}}
 	&\gnumericPB{\raggedright}\gnumbox[l]{\text{Number of questions answered correctly}}
 \\
 \hline

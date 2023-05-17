@@ -167,38 +167,15 @@ The Variance of $X$,
     \sigma^2 &= n\times p\times (1-p)\\
     &= 5
 \end{align}
-\begin{enumerate}
-    \item 
-    \textbf{Gaussian}
-
 Applying the normal approximation to $X$ for large values of n,
 \begin{align}
-	\pr{X \ge a}=Q(a)&= \int_{a-0.5}^{\infty} \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(k-\mu)^2}{2\sigma^2}}\,dk\ \\
-	Q(12)&= \int_{11.5}^{\infty} \frac{1}{\sqrt{10\pi}}e^{-\frac{(k-10)^2}{10}}\,dk\ \\
+	\pr{a \le X \le b}&= \int_{a-0.5}^{b+0.5} \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(k-\mu)^2}{2\sigma^2}}\,dk\ \\
+	\pr{12 \le X \le 20}&= \int_{11.5}^{20.5} \frac{1}{\sqrt{10\pi}}e^{-\frac{(k-10)^2}{10}}\,dk\ \\
 \end{align}
 On computation,
 \begin{align} 
-	Q(12) \approx 0.2512 
+	\pr{12 \le X \le 20} \approx 0.2512 
 \end{align}
-\item
-\textbf{Binomial}
-
-Since $X$ follows binomial distribution,
-\begin{align}
-    \pr{X=k} &= \comb{n}{k}p^k q^{n-k}\\
-    \pr{X \ge k} &= \sum_{t=k}^{20} \comb{n}{t}p^t q^{n-t}
-\end{align}
-for $k=12$,
-\begin{align}
-    \pr{X \ge 12} &= \sum_{t=12}^{20} \comb{20}{t}(0.5)^t (0.5)^{20-t}\\
-	&=0.2517
-\end{align}
-\item
-\textbf{Comparison}
-
-The approximation holds since the value of p = 0.5 and n is large enough. The approximation has a relative error of $0.2\%$.
-\end{enumerate}
-
 \end{document}
 
 Foot
