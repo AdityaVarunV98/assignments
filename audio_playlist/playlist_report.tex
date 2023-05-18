@@ -1,5 +1,22 @@
 \documentclass{article}
-
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+%\usepackage{textcomp}
+%\usepackage{xcolor}
+%\usepackage{txfonts}
+%\usepackage{listings}
+%\usepackage{enumitem}
+%\usepackage{mathtools}
+%\usepackage{gensymb}
+%\usepackage[breaklinks=true]{hyperref}
+%\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usepackage{listings}
+%\graphicspath{{/home/}} 
 \title{Lab Report: Random Audio Playlist Player using MoviePy}
 \author{Aditya Varun V}
 \date{\today}
@@ -11,7 +28,7 @@
 The aim of this lab report is to provide an analysis of a Python script that implements a random audio playlist player using the MoviePy library. The code allows users to create and play a playlist of audio files in a random order. This report provides an overview of the code structure, explains the key components, and discusses its functionality.
 
 \section{Introduction}
-The provided code is a Python script that utilizes the MoviePy library to create a random audio playlist. The script allows users to specify the number of times they want the playlist to be played and randomly selects songs from a predefined list. The audio files are extracted from MP4 files using the VideoFileClip class provided by the MoviePy library.
+The provided code is a Python script that utilizes the MoviePy library to create a random audio playlist. The script allows users to specify the number of times they want the playlist to be played and randomly selects songs from a predefined list. The audio files are extracted from MP4 files using the VideoFileClip class provided bgy the MoviePy library.
 
 \section{Methods}
 The code can be divided into several sections:
@@ -41,6 +58,13 @@ The main execution loop is implemented using a \texttt{while} loop. The loop con
   \item The loop continues until the desired number of rounds is completed.
 \end{itemize}
 
-\section{Results and Discussion}
-The provided code has been tested and successfully implements a random audio playlist player using the MoviePy library. The script allows users to create a playlist of audio files and play them
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.8\textwidth]{/home/aditya_varun_v/Documents/prv/audio_playlist/images/photo1.png}
+ \caption{output}
+ \label{output}
+\end{figure}
+
+\section{Results}
+The provided code has been tested and successfully implements a random audio playlist player using the MoviePy library. The script allows users to create a playlist of audio files and play them.
 \end{document}
